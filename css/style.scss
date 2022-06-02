@@ -228,9 +228,39 @@ $paragraph: 1.6rem;
 }
 
 .skills {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__title{
+        width: 100%;
+        line-height: normal;
+        font-size: $titles;
+        color: $secondary-color;
+        text-align: center;
+        h2{
+            margin: 26px 0;
+            border-bottom: 2px solid $blanco;
+            display: inline-block;
+        }
+    }
+    &__sub{
+        margin: auto;
+        width: 60%;
+        font-size: $paragraph;
+        text-align: center;
+    }
+    &__cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
     &__card{
         width: 190px;
-        height: 254px;
+        height: 200px;
         transition: all 0.2s;
         position: relative;
         margin: 12px;
@@ -267,20 +297,96 @@ $paragraph: 1.6rem;
             left: -25px;
         }
         &:nth-child(2){
-            top: 180px;
+            top: 150px;
             right: -25px;
             animation-name: move-down1;
         }
     }
 }
+.folios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    background: $secondary-color;
+    position: relative;
+    &__title{
+        width: 100%;
+        line-height: normal;
+        font-size: $titles;
+        color: $blanco;
+        text-align: center;
+        h2{
+            margin: 26px 0;
+            border-bottom: 2px solid $blanco;
+            display: inline-block;
+        }
+    }
+    &__sub{
+        margin: auto;
+        width: 60%;
+        font-size: $paragraph;
+        text-align: center;
+        color: $blanco;
+    }
+    &__card{
+        width: 190px;
+        height: 200px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+        background: #fff;
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+        position: relative;
+        transition: all .4s;
+        overflow: hidden;
+        margin: 12px;
+        img{
+            object-fit: cover;
+        }
+        &:hover .folios__social{
+            opacity: 1;
+        }
+    }
+    &__cards{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__social{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: $titles;
+        color: $terciary-color;
+        background: rgba(200, 177, 255, 0.526);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all .4s;
+        a{
+            cursor: pointer;
+            transition: 0.5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.398);
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
 @keyframes move-up6 {
     to {
       transform: translateY(-10px);
     }
-  }
+}
   
   @keyframes move-down1 {
     to {
       transform: translateY(10px);
     }
-  }
+}

@@ -266,9 +266,53 @@
   width: 70%;
 }
 
+.skills {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills__title {
+  width: 100%;
+  line-height: normal;
+  font-size: 5rem;
+  color: #2b2d42;
+  text-align: center;
+}
+.skills__title h2 {
+  margin: 26px 0;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+}
+.skills__sub {
+  margin: auto;
+  width: 60%;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.skills__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+}
 .skills__card {
   width: 190px;
-  height: 254px;
+  height: 200px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: relative;
@@ -311,10 +355,112 @@
   left: -25px;
 }
 .skills__circle:nth-child(2) {
-  top: 180px;
+  top: 150px;
   right: -25px;
   -webkit-animation-name: move-down1;
           animation-name: move-down1;
+}
+
+.folios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100vh;
+  background: #2b2d42;
+  position: relative;
+}
+.folios__title {
+  width: 100%;
+  line-height: normal;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+}
+.folios__title h2 {
+  margin: 26px 0;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+}
+.folios__sub {
+  margin: auto;
+  width: 60%;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
+}
+.folios__card {
+  width: 190px;
+  height: 200px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  overflow: hidden;
+  margin: 12px;
+}
+.folios__card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.folios__card:hover .folios__social {
+  opacity: 1;
+}
+.folios__cards {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.folios__social {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 5rem;
+  color: #ef233c;
+  background: rgba(200, 177, 255, 0.526);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.folios__social a {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.398);
+}
+.folios__social a:hover {
+  color: #2b2d42;
 }
 
 @-webkit-keyframes move-up6 {

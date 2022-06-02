@@ -35,7 +35,7 @@
   z-index: 2;
 }
 
-.main, .overlay {
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,11 +50,11 @@
   height: 100vh;
   background: #f5f5f5;
 }
-.main__imgbx, .overlay__imgbx {
+.main__imgbx {
   width: 40%;
   height: auto;
 }
-.main__text, .overlay__text {
+.main__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +69,7 @@
   height: 100vh;
   padding: 5rem 8rem;
 }
-.main__text h3, .overlay__text h3 {
+.main__text h3 {
   display: inline-block;
   font-size: 2rem;
   background: #2b2d42;
@@ -77,28 +77,28 @@
   padding: 4px;
   margin: 6px 0;
 }
-.main__me, .overlay__me {
+.main__me {
   line-height: 1.1;
 }
-.main__me h2, .overlay__me h2 {
+.main__me h2 {
   font-size: 2.5rem;
 }
-.main__me h2 span, .overlay__me h2 span {
+.main__me h2 span {
   font-weight: 700;
   font-size: 5rem;
   color: #d90429;
   margin: 0;
 }
-.main__me h1, .overlay__me h1 {
+.main__me h1 {
   font-size: 3.5rem;
   color: #d90429;
   margin: 0;
 }
-.main__me p, .overlay__me p {
+.main__me p {
   font-size: 1.6rem;
   margin: 12px 0;
 }
-.main__me button, .overlay__me button {
+.main__me button {
   display: inline-block;
   border-radius: 4px;
   background-color: #3d405b;
@@ -113,7 +113,7 @@
   cursor: pointer;
   margin: 5px;
 }
-.main__me button a, .overlay__me button a {
+.main__me button a {
   font-size: 1.6rem;
   cursor: pointer;
   display: inline-block;
@@ -121,7 +121,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.main__me button a::after, .overlay__me button a::after {
+.main__me button a::after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -130,22 +130,22 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.main__me button:hover a, .overlay__me button:hover a {
+.main__me button:hover a {
   padding-right: 15px;
 }
-.main__me button:hover a::after, .overlay__me button:hover a::after {
+.main__me button:hover a::after {
   opacity: 1;
   right: 0;
 }
-.main__social, .overlay__social {
+.main__social {
   font-size: 2.5rem;
 }
-.main__social a, .overlay__social a {
+.main__social a {
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.main__social a:hover, .overlay__social a:hover {
+.main__social a:hover {
   color: #ef233c;
 }
 

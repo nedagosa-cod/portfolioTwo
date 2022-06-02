@@ -289,7 +289,7 @@
 }
 .skills__title h2 {
   margin: 26px 0;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #2b2d42;
   display: inline-block;
 }
 .skills__sub {
@@ -461,6 +461,54 @@
 }
 .folios__social a:hover {
   color: #2b2d42;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d90429;
+  font-size: 1.4rem;
+  width: 100%;
+  height: 200px;
+  background-image: url(../src/bg-footer.svg);
+  background-size: cover;
+  transition: ease-in-out 0.9s;
+  -webkit-transition: ease-in-out 0.9s;
+  -moz-transition: ease-in-out 0.9s;
+  -ms-transition: ease-in-out 0.9s;
+  -o-transition: ease-in-out 0.9s;
+}
+.footer:hover {
+  background-image: url(../src/bg-footer-99.svg);
+}
+.footer span {
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 12px;
+  color: #50535A;
+  font-weight: 700;
+}
+.footer__follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.footer__follow span {
+  width: 100%;
+}
+.footer__me {
+  text-align: end;
 }
 
 @-webkit-keyframes move-up6 {

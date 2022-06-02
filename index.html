@@ -15,7 +15,7 @@
 </head>
 <body>
     <span class="toggle" id="toggle"></span>
-    <main class="main">
+    <main class="main" id="main">
         <figure class="main__imgbx">
             <img src="./src/img-main.jpg" alt="profile">
         </figure>
@@ -102,7 +102,7 @@
             </div>
         </article>
     </section>
-    <section class="folios">
+    <section class="folios" id="folios">
         <div class="folios__title">
             <h2>Portfolios</h2>
         </div>
@@ -161,13 +161,42 @@
             </div>
         </article>
     </section>
-    <div id="myNav" class="overlay">
-        <div class="overlay__content">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+    <footer class="footer">
+        <div class="footer__contac">
+            <span>Contact Me</span>
+            <a href="#">nestorcode4004@gmail.com</a>
+            <span>OFFICE</span>
+            <p>+57 300 780 5666</p>
         </div>
+        <div class="footer__follow">
+            <span>Follow Me</span>
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="footer__me">
+            <span>Me</span>
+            <p>Nestor Gomez</p>
+            <p>Front End Developer</p>
+        </div>
+    </footer>
+    <div id="myNav" class="overlay">
+        <form class="overlay__content" id="overlayForm">
+            <a href="#main">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+          <a href="#folios">Portfolio</a>
+          <a href="#">Contact</a>
+        </form>
     </div>
 </body>
 </html>

@@ -154,6 +154,54 @@
 .main__social a:hover {
   color: #ef233c;
 }
+@media screen and (max-width: 480px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+  }
+  .main__imgbx {
+    width: 100%;
+  }
+  .main__text {
+    position: absolute;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+  }
+  .main__text h3 {
+    visibility: hidden;
+  }
+  .main__me {
+    width: 100%;
+    padding: 0;
+  }
+  .main__me h2 {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  .main__me h2 span {
+    font-size: 2.3rem;
+  }
+  .main__me h1 {
+    font-size: 2.8rem;
+  }
+  .main__me p {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .main__me button {
+    margin: auto;
+  }
+  .main__social {
+    color: #fff;
+  }
+}
 
 .overlay {
   height: 0%;
@@ -266,6 +314,26 @@
   margin: 0 auto;
   width: 70%;
 }
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 0;
+  }
+  .about__title {
+    font-size: 1.5rem;
+  }
+  .about__article {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .about__article p {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .about__imgbx {
+    display: none;
+  }
+}
 
 .skills {
   width: 100%;
@@ -360,6 +428,31 @@
   right: -25px;
   -webkit-animation-name: move-down1;
           animation-name: move-down1;
+}
+@media screen and (max-width: 480px) {
+  .skills__title {
+    font-size: 1.5rem;
+  }
+  .skills__sub {
+    display: none;
+  }
+  .skills__cards {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skills__card {
+    width: 35%;
+    height: 140px;
+  }
 }
 
 .folios {
@@ -463,6 +556,34 @@
 }
 .folios__social a:hover {
   color: #2b2d42;
+}
+@media screen and (max-width: 480px) {
+  .folios {
+    height: auto;
+  }
+  .folios__title {
+    font-size: 1.5rem;
+  }
+  .folios__sub {
+    display: none;
+  }
+  .folios__cards {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .folios__card {
+    width: 40%;
+    margin: 10px;
+  }
 }
 
 .footer {

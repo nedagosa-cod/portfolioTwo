@@ -10,7 +10,11 @@ $subtitles: 2.5rem;
 $minititle: 2rem;
 $paragraph: 1.6rem;
 
-
+@mixin mv ($media: 480px) {
+    @media screen and (max-width: $media) {
+        @content;
+    }
+}
 .toggle{
     display: flex;
     z-index: 2;
@@ -40,7 +44,6 @@ $paragraph: 1.6rem;
         height: 50px;
     }
 }
-
 .main{
     display: flex;
     overflow: hidden;
@@ -49,6 +52,7 @@ $paragraph: 1.6rem;
     width: 100%;
     height: 100vh;
     background: #f5f5f5;
+    
     &__imgbx{
         width: 40%;
         height: 100%;
@@ -141,6 +145,48 @@ $paragraph: 1.6rem;
             }
         }
     }
+    @include mv(480px) {
+        flex-direction: column;
+        position: relative;
+        &__imgbx{
+            width: 100%;
+        }
+        &__text{
+            position: absolute;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 1rem;
+            padding: 10px;
+            width: 100%;
+            h3{
+                visibility: hidden;
+            }
+        }
+        &__me{
+            width: 100%;
+            padding: 0;
+            h2{
+                font-size: 1.3rem;
+                color: $blanco;
+                span{
+                    font-size: 2.3rem;
+                }
+            }
+            h1{
+                font-size: 2.8rem;
+            }
+            p{
+                font-size: 1.5rem;
+                color: $blanco;
+            }
+            button{
+                margin: auto;
+            }
+        }
+        &__social{
+            color: $blanco;
+        }
+    }
 }
 .overlay{
     height: 0%;
@@ -226,6 +272,24 @@ $paragraph: 1.6rem;
             width: 70%;
         }
     }
+    @include mv(480px) {
+        padding: 0;
+        &__title{
+            font-size: 1.5rem;
+        }
+        &__article{
+            width: 100%;
+            padding: 0 15px;
+            p{
+                text-align: center;
+                width: 100%;
+                font-size: 1rem;
+            }
+        }
+        &__imgbx{
+            display: none;
+        }
+    }
 }
 .skills {
     width: 100%;
@@ -300,6 +364,24 @@ $paragraph: 1.6rem;
             top: 150px;
             right: -25px;
             animation-name: move-down1;
+        }
+    }
+    @include mv(480px) {
+        &__title{
+            font-size: 1.5rem;
+        }
+        &__sub{
+            display: none;
+        }
+        &__cards{
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        &__card{
+            width: 35%;
+            height: 140px;
         }
     }
 }
@@ -378,6 +460,25 @@ $paragraph: 1.6rem;
             }
         }
     }
+    @include mv(480px) {
+        height: auto;
+        &__title{
+            font-size: 1.5rem;
+        }
+        &__sub{
+            display: none;
+        }
+        &__cards{
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        &__card{
+            width: 40%;
+            margin: 10px;
+        }
+    }
 }
 .footer{
     display: flex;
@@ -440,8 +541,7 @@ $paragraph: 1.6rem;
       transform: translateY(-10px);
     }
 }
-  
-  @keyframes move-down1 {
+@keyframes move-down1 {
     to {
       transform: translateY(10px);
     }

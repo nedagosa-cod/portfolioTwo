@@ -13,17 +13,18 @@ $paragraph: 1.6rem;
 
 .toggle{
     display: flex;
+    z-index: 2;
     justify-content: center;
     position: fixed;
-    background: white;
+    background: black;
     width: 50px;
     height: 50px;
     color: white;
     align-items: center;
     right: 30px;
     top: 30px;
-    background-image:url(https://img.icons8.com/ios-filled/50/undefined/menu--v1.png);
-    background-size: 40px 40px;
+    background-image:url(../src/menu.png);
+    background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.2s ;
@@ -33,10 +34,14 @@ $paragraph: 1.6rem;
     -o-transition: 0.2s ;
 }
 .active {
-    background-image: url(https://img.icons8.com/ios-filled/50/undefined/delete-sign--v1.png);
+    background: transparent;
+    background-size: cover;
+    background-image: url(../src/close.png);
+    z-index: 2;
 }
-.main{
+.main, .overlay{
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -44,7 +49,7 @@ $paragraph: 1.6rem;
     background: #f5f5f5;
     &__imgbx{
         width: 40%;
-        height: 100vh;
+        height: auto;
     }
     &__text{
         display: flex;
@@ -121,5 +126,89 @@ $paragraph: 1.6rem;
     }
     &__social{
         font-size: $subtitles;
+        a{
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                color: $terciary-color;
+            }
+        }
+    }
+}
+.overlay{
+    height: 0%;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+    &__content{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        a{
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            &:hover, &:focus{
+                color: $primary-color;
+            }
+        }
+    }
+    &__closebtn{
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+    &.active{
+        height: 100%;
+    }
+}
+.about{
+    display: flex;
+    height: 100vh;
+    padding: 0 120px;
+    flex-wrap: wrap;
+    background: $secondary-color;
+    &__title{
+        width: 100%;
+        line-height: normal;
+        font-size: $titles;
+        color: $blanco;
+        text-align: center;
+        h2{
+            margin: 26px 0;
+        }
+    }
+    &__article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        color: $blanco;
+        p{
+            margin: 0 auto;
+            width: 500px;
+            font-size: $paragraph;
+        }
+    }
+    &__imgbx{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        img{
+            margin: 0 auto;
+            width: 70%;
+        }
     }
 }

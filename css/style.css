@@ -3,11 +3,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 2;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  background: white;
+  background: black;
   width: 50px;
   height: 50px;
   color: white;
@@ -16,8 +17,8 @@
           align-items: center;
   right: 30px;
   top: 30px;
-  background-image: url(https://img.icons8.com/ios-filled/50/undefined/menu--v1.png);
-  background-size: 40px 40px;
+  background-image: url(../src/menu.png);
+  background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
   transition: 0.2s;
@@ -28,13 +29,17 @@
 }
 
 .active {
-  background-image: url(https://img.icons8.com/ios-filled/50/undefined/delete-sign--v1.png);
+  background: transparent;
+  background-size: cover;
+  background-image: url(../src/close.png);
+  z-index: 2;
 }
 
-.main {
+.main, .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -45,11 +50,11 @@
   height: 100vh;
   background: #f5f5f5;
 }
-.main__imgbx {
+.main__imgbx, .overlay__imgbx {
   width: 40%;
-  height: 100vh;
+  height: auto;
 }
-.main__text {
+.main__text, .overlay__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,7 +69,7 @@
   height: 100vh;
   padding: 5rem 8rem;
 }
-.main__text h3 {
+.main__text h3, .overlay__text h3 {
   display: inline-block;
   font-size: 2rem;
   background: #2b2d42;
@@ -72,28 +77,28 @@
   padding: 4px;
   margin: 6px 0;
 }
-.main__me {
+.main__me, .overlay__me {
   line-height: 1.1;
 }
-.main__me h2 {
+.main__me h2, .overlay__me h2 {
   font-size: 2.5rem;
 }
-.main__me h2 span {
+.main__me h2 span, .overlay__me h2 span {
   font-weight: 700;
   font-size: 5rem;
   color: #d90429;
   margin: 0;
 }
-.main__me h1 {
+.main__me h1, .overlay__me h1 {
   font-size: 3.5rem;
   color: #d90429;
   margin: 0;
 }
-.main__me p {
+.main__me p, .overlay__me p {
   font-size: 1.6rem;
   margin: 12px 0;
 }
-.main__me button {
+.main__me button, .overlay__me button {
   display: inline-block;
   border-radius: 4px;
   background-color: #3d405b;
@@ -108,7 +113,7 @@
   cursor: pointer;
   margin: 5px;
 }
-.main__me button a {
+.main__me button a, .overlay__me button a {
   font-size: 1.6rem;
   cursor: pointer;
   display: inline-block;
@@ -116,7 +121,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.main__me button a::after {
+.main__me button a::after, .overlay__me button a::after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -125,13 +130,119 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.main__me button:hover a {
+.main__me button:hover a, .overlay__me button:hover a {
   padding-right: 15px;
 }
-.main__me button:hover a::after {
+.main__me button:hover a::after, .overlay__me button:hover a::after {
   opacity: 1;
   right: 0;
 }
-.main__social {
+.main__social, .overlay__social {
   font-size: 2.5rem;
+}
+.main__social a, .overlay__social a {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.main__social a:hover, .overlay__social a:hover {
+  color: #ef233c;
+}
+
+.overlay {
+  height: 0%;
+  width: 60%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.overlay__content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.overlay__content a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.overlay__content a:hover, .overlay__content a:focus {
+  color: #d90429;
+}
+.overlay__closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.overlay.active {
+  height: 100%;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  padding: 0 120px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #2b2d42;
+}
+.about__title {
+  width: 100%;
+  line-height: normal;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+}
+.about__title h2 {
+  margin: 26px 0;
+}
+.about__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  color: #fff;
+}
+.about__article p {
+  margin: 0 auto;
+  width: 500px;
+  font-size: 1.6rem;
+}
+.about__imgbx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+.about__imgbx img {
+  margin: 0 auto;
+  width: 70%;
 }

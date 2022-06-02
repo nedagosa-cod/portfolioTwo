@@ -1,14 +1,125 @@
+//Variables
+
+$negro: #50535A;
+$blanco: #fff;
+$primary-color: #d90429;
+$secondary-color: #2b2d42;
+$terciary-color: #ef233c;
+$titles: 5rem;
+$subtitles: 2.5rem;
+$minititle: 2rem;
+$paragraph: 1.6rem;
+
+
 .toggle{
     display: flex;
     justify-content: center;
     position: fixed;
-    background: black;
+    background: white;
     width: 50px;
     height: 50px;
-    font-size: 4rem;
     color: white;
     align-items: center;
     right: 30px;
     top: 30px;
+    background-image:url(https://img.icons8.com/ios-filled/50/undefined/menu--v1.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
     cursor: pointer;
+    transition: 0.2s ;
+    -webkit-transition: 0.2s ;
+    -moz-transition: 0.2s ;
+    -ms-transition: 0.2s ;
+    -o-transition: 0.2s ;
+}
+.active {
+    background-image: url(https://img.icons8.com/ios-filled/50/undefined/delete-sign--v1.png);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #f5f5f5;
+    &__imgbx{
+        width: 40%;
+        height: 100vh;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60%;
+        height: 100vh;
+        padding: 5rem 8rem;
+        h3{
+            display: inline-block;
+            font-size: $minititle;
+            background: $secondary-color;
+            color: $blanco;
+            padding: 4px;
+            margin: 6px 0;
+        }
+    }
+    &__me{
+        line-height: 1.1;
+        h2{
+            font-size: $subtitles;
+            span{
+                font-weight: 700;
+                font-size: $titles;
+                color: $primary-color;
+                margin: 0;
+            }
+        }
+        h1{
+            font-size: 3.5rem;
+            color: $primary-color;
+            margin: 0;
+        }
+        p{
+            font-size: $paragraph;
+            margin: 12px 0;
+        }
+        button{
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #3d405b;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 17px;
+            padding: 16px;
+            width: 135px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            a{
+                font-size: $paragraph;
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+                &::after{
+                    content: '»';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -15px;
+                    transition: 0.5s;
+                }
+            }
+            &:hover a{
+                padding-right: 15px;
+            }
+            &:hover a::after{
+                opacity: 1;
+                right: 0;
+            }
+        }
+    }
+    &__social{
+        font-size: $subtitles;
+    }
 }

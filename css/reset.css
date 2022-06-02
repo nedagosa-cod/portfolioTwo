@@ -15,7 +15,7 @@
     --terciary-color: #ef233c;
     --gray-color: #8d99ae;
     /* Tipografía */
-    --tipo-principal: 'Quicksand', sans-serif;
+    --tipo-principal: 'Fuzzy Bubbles', cursive;
     --tipo-secundaria: Verdana;
   }
   
@@ -129,19 +129,15 @@
   } */
   /* Configuramos la tipografía para toda la web */
   body {
-    background-image: url('../src/img/bg.svg');
+    /* background-image: url('../src/img/bg.svg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--tipo-principal);
     color: var(--negro);
     /* opcional */
     line-height: 2rem;
-    /* opcional */
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
     /* opcional */
     font-smooth: always;
     /* opcional */

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -11,8 +14,30 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="toggle" id="toggle">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+    <span class="toggle" id="toggle"></span>
+    <main class="main">
+        <figure class="main__imgbx">
+            <img src="./src/img-main.jpg" alt="profile">
+        </figure>
+        <article class="main__text">
+            <div>
+                <h3>My_Portfolio</h3>
+            </div>
+            <div class="main__me">
+                <h2><span>Hello,</span> I´m</h2>
+                <h1>Nestor David Gomez</h1>
+                <h2>I´m a Front End Developer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe praesentium veniam deserunt beatae! Inventore, sequi iste optio ex quasi, beatae consectetur error repellat, tempore officiis dolorum animi expedita provident quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla voluptates sunt culpa dolorem porro fugiat pariatur! Dicta tempora nemo iure dignissimos facere alias ratione reiciendis, ex aliquid ipsum cumque.</p>
+                <button>
+                    <a href="#">About Me</a>
+                </button>
+            </div>
+            <div class="main__social">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-twitter-square"></i>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
